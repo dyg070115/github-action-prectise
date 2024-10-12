@@ -18,9 +18,9 @@ jobs:
         run: echo "${{ github.repository }}"; ls -la
       - name: print github action env
         run: env
-      - name: print github action env
+      - name: print github action workspace
         run: echo "${{ github.workspace }}"
-      - name: print github action env
+      - name: print github action event_name
         run: echo "${{ github.event_name }}"
         
 
