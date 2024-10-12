@@ -8,11 +8,20 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: list files
+        run: touch text.txt; ls -la
 
   build:
     runs-on: ubuntu-latest
     steps:
       - name: build code
         run: echo "${{ github.repository }}"; ls -la
+      - name: print github action env
+        run: env
+      - name: print github action env
+        run: echo "${{ github.workspace }}"
+      - name: print github action env
+        run: echo "${{ github.event_name }}"
+        
 
 
