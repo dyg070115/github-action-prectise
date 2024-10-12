@@ -11,7 +11,7 @@ jobs:
       - name: list files
         run: touch text.txt; ls -la
 
-  build:
+  display-env:
     runs-on: ubuntu-latest
     steps:
       - name: build code
@@ -21,7 +21,15 @@ jobs:
       - name: print github action workspace
         run: echo "${{ github.workspace }}"
       - name: print github action event_name
-        run: echo "${{ github.event_name }}"
+        run: |
+          echo "${{ github.event_name }}"
+          ls -la
+          echo "123" > 123.txt
+          cat 123.txt
+      - name: list java version
+        run: |
+          which java
+          java -version
         
 
 
