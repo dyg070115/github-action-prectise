@@ -17,6 +17,7 @@ jobs:
           path: '.'
 
   display-env:
+    needs: checkout
     runs-on: ubuntu-latest
     steps:
       - name: build code
@@ -36,6 +37,7 @@ jobs:
           which java
           java -version
   share-code:
+    needs: [checkout,display-env]
     runs-on: ubuntu-latest
     steps:
       - name: Archive code coverage results
