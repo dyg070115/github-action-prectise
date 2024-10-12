@@ -15,7 +15,7 @@ jobs:
         with:
           name: upload main.groovy
           path: |
-            main.groovy
+            $GITHUB_WORKSPACE/main.groovy
 
   display-env:
     runs-on: ubuntu-latest
