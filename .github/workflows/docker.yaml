@@ -1,1 +1,18 @@
 name: build a image
+on:
+  push:
+    branches: [ main ]
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build code
+        run: echo "${{ github.repository }}"
+
+
