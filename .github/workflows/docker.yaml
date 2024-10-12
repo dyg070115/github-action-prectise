@@ -13,6 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build code
-        run: echo "${{ github.repository }}"
+        run: echo "${{ github.repository }}"; ls -la
 
 
